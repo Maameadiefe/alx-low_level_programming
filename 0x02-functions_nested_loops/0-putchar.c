@@ -2,7 +2,7 @@
 
 
 /**
- * main - Entr level
+ * main - Entry level
  * Return: Always 0
  */
 
