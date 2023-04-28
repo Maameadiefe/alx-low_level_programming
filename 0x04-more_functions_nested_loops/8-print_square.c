@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_square - Printsquares according to n parameter
+ * print_square - Print squares according to n parameter
  * @n: The number of times to print
  * Return: empty
  */
@@ -13,7 +13,7 @@ void print_square(int n)
 
 	if (n <= 0)
 	{
-	_putchar('\n);
+	_putchar('\n');
 	}
 	else
 	{
