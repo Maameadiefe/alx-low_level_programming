@@ -7,7 +7,7 @@
  * Return: The result from the multplication of the two integers
  */
 
-int mul(int x int z)
+int mul(int x, int z)
 
 {
 	return (x * z);
