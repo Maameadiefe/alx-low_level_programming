@@ -2,9 +2,10 @@
 
 /**
  * print_most_numbers - Prints numbers from 0 to 9
- * Descriptio: prints numbers except 2 and 4
+ * Description: prints the  numbers except 2 and 4
  * Return: The numbers between 0 and 9
  */
+
 void print_most_numbers(void)
 
 {
