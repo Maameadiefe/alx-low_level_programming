@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * print_diagonal - Draws a diagonal line per parameter
- * @n: the number of times to print diagonally
+ * print_diagonal - Draws a diagonal line according to parameter
+ * @n: The number of times to print diagonally
  * Return: empty
  */
 
@@ -19,7 +19,7 @@ void print_diagonal(int n)
 	{
 	for (w = 0; w < n; w++)
 	{
-	for (y = 0; y < n; y++)
+	for (y = 0; y < w; y++)
 	{
 	_putchar(32);
 	}
