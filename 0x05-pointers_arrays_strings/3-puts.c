@@ -2,14 +2,14 @@
 
 /**
  * _puts - prints a string and followed by a new line to stdout
- * @abc: string to print
+ * @str: string to print
  */
 
-void _puts(char *abc)
+void _puts(char *str)
 {
-	while (*abc != '\0')
+	while (*str != '\0')
 	{
-		_putchar(*abc);
+		_putchar(*str);
 	}
 		_putchar('\n');
 }
