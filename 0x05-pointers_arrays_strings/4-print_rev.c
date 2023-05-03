@@ -2,25 +2,25 @@
 
 /**
  * print_rev - prints a string in reverse
- * @c: String
+ * @s: String
  * Return: 0
  */
 
-void print_rev(char *c);
+void print_rev(char *s);
 {
 	int longi = 0;
 	int o;
 
-	while (*c != '\0')
+	while (*s != '\0')
 	{
 		longi++;
-		c++;
+		s++;
 	}
-	c--;
+	s--;
 	for (o = longi; o > 0; o--)
 	{
-		_putchar(*c);
-		c--;
+		_putchar(*s);
+		s--;
 	}
 		_putchar('\n');
 }
