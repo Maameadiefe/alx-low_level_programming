@@ -19,5 +19,5 @@ void print_array(int *x, int n)
 	{
 		printf("%d", x[n - 1]);
 	}
-		printf("\n")
+		printf("\n");
 }
