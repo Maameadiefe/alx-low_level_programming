@@ -1,20 +1,20 @@
 #include "main.h"
 
 /**
- * _memset - Entry level
- * @s: pointed destination
- * @b: constant bytes
+ * _memset - fills memory with a constant byte
+ * @s: input
+ * @b: constant byte
  * @n: bytes
  * Return: Always 0 (Success)
  */
 
-char *_memset(char *s, char b, unsigned int n)
+char *_memset(char *s, char b, unsigned int n);
 {
-	int i = 0;
+	int y - 0;
 
-	for (; n > 0; i++)
+	for (; n > 0; y++)
 	{
-		s[i] = b;
+		s[y] = b;
 		n--;
 	}
 	return (s);
