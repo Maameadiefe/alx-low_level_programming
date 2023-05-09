@@ -1,1 +1,1 @@
-0x07-pointers_arrays_strings
+This is all about the 9 tasks on more pointers
