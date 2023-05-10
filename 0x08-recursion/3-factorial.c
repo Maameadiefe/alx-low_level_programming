@@ -2,13 +2,13 @@
 
 /**
  * factorial - This untion returns the factorialof a given number
- * @x: the given number
+ * @n: the given number
  * Return: Value
  */
 int factorial(int n)
 {
-	if (x <= 1)
+	if (n <= 1)
 		return (1);
 	else
-		return (x * factorial(x - 1));
+		return (n * factorial(n - 1));
 }
