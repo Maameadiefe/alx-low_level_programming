@@ -1,7 +1,6 @@
 #include "main.h"
-#include <stdio.h>
 
-int _sqrt_recursion(int n);
+int real_sqrt_recursion(int n, int i);
 
 /**
  * _sqrt_recursion - a function that returns the natural square root of a number
@@ -11,24 +10,23 @@ int _sqrt_recursion(int n);
 
 int _sqrt_recursion(int n)
 {
-	return (_sqrt(n, 1));
+	if (n < 0)
+		return (-1);
+	return (rea_sqrt_recursion(n, 0));
 }
 
 /**
- * _sqrt - calculates the natural square root of a number
+ * real_sqrt_recursion - calculates the natural square root of a number
  * @n: Number to calculte its natural square root
  * @i: iterate number
  * Return: natural square root
  */
 
-int _sqrt(int n, int i)
+int real_sqrt_recursion(int n, int i)
 {
-	int sqrt = i * i;
-
-	if (sqrt > n)
+	if (i * i > n)
 		return (-1);
-
-	if (sqrt == n)
+	if (i * i == n)
 		return (i);
-	return (_sqrt(n, i + 1));
+	return (real_sqrt_recursion(n, i + 1));
 }
