@@ -1,19 +1,21 @@
 #include "main.h"
 
 /**
- * _memset - constant byte
- * @s: memory path
- * @b: constant byte
- * @n: byes memory path
- * Return: Always 0 (Success)
+ * _memset - this function fills a block of memory with a specific value
+ * @s: memory to be filled
+ * @b: value expected
+ * @n:bytes to be changed
+ * Return: changed array with value of n bytes
  */
-char *_memset(char *s, chzr b, unsigned int n);
-{
-	int a = 0;
 
-	for (; n > 0; a++)
+char *_memset(char *s, char b, unsigned int n)
+{
+	int i;
+
+	i = 0;
+	for (; n > 0; i++)
 	{
-		s[a] = b;
+		s[i] = b;
 		n--;
 	}
 	return (s);
