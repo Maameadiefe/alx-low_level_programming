@@ -5,7 +5,6 @@
  * free_grid - frres a two dimensional already created grid
  * @height: height of the grid
  * @grid: address of the two dimensional grid
- * @width: widthof grid
  * Return: Nothing
  */
 
