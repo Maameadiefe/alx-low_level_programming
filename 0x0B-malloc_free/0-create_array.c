@@ -5,7 +5,7 @@
 
 /**
  * create_array - this fxn creates array of chars and initialize with char
- * @s: address of char memory
+ * @c: address of char memory
  * @size: size of memory
  * Return: NULL
  */
