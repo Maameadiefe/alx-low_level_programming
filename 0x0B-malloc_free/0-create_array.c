@@ -21,9 +21,9 @@ char *create_array(unsigned int size, char c)
 	}
 	s = (char *) malloc(size * sizeof(char));
 	if (s == NULL)
-		{
+	{
 			return (NULL);
-		}
+	}
 	for (x = 0; x < size; x++)
 	{
 		s[x] = c;
