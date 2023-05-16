@@ -4,7 +4,7 @@
 
 
 /**
- * create_array - this function creates an array of chars and initialize with char
+ * create_array - this fxn creates array of chars and initialize with char
  * @s: address of char memory
  * @size: size of memory
  * Return: NULL
@@ -19,9 +19,8 @@ char *create_array(unsigned int size, char c)
 	{
 		return (NULL);
 	}
-	
 	s = (char *) malloc(size * sizeof(char));
-		if (s == NULL)
+	if (s == NULL)
 		{
 			return (NULL);
 		}
