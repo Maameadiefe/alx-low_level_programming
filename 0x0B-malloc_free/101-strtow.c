@@ -1,101 +1,68 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
 
-int word_len(char *str);
-int count_words(char *str);
-char **strtow(char *str);
-
 /**
- * word_len - splits string into two
- * @str: the string
- * Return: nothing
+ * count_words - this will count number of words contained in a string
+ * @x: string
+ * Return: number of words
  */
-
-int count_word(char *str)
+int count_words(char *s)
 {
-	int dex = 0, len = 0;
+	int w = 0, y = 0;
+	int x;
 
-	while (*(str + dex) && *(str + dex) != ' ')
+	for (x = 0; s[x] != '\0'; x++)
 	{
-		len++;
-		dex++;
-	}
-
-	return (len);
-}
-
-/**
- * count_words - count words contained in a string
- * @str; string to search
- * Return: nothing
- */
-
-int count_words(char *str)
-{
-	int dex = 0, words = 0, len = 0;
-
-	for (dex = 0; *(str + dex); dex++)
-		len++;
-
-	for (dex = 0; dex < len; dex++)
-		
-	{
-		if (*(str + dex) != ' ')
+		if (s[x] == ' ')
+			w = 0;
+		else if (w == 0)
 		{
-			words++;
-			dex += word_len(str + dex);
+			w = 1;
+			y++;
 		}
 	}
-
-	return (words);
+	return (y);
 }
-
 /**
- * strtow - this will split a string into words
- * @str: the string to spliy
- * Return: nothing
+ * **strtow - this will split a string  into words
+ * @str: inputed string
+ * Return: pointer to a string(success)
+ * or NULL if not
  */
-
 char **strtow(char *str)
 {
-	char **strn;
-	int dex = 0, words, x, lett, y;
+	char **m, *n;
+	int i, j = 0, len = 0, words, x = 0, k, z;
 
-	if (str == NULL || str[0] == '\0')
-		return (NULL);
+	while (*(str + len))
+		len++;
 	words = count_words(str);
 	if (words == 0)
 		return (NULL);
-
-	strn = malloc(sizeof(char *) * (words = 1));
-	if (strn == NULL)
+	m = (char **) malloc(sizeof(char *) * (words + 1));
+	if (m == NULL)
 		return (NULL);
-
-	for(x = 0; x < words; x++)
+	for (i = 0; i <= len; i++)
 	{
-		while (str[dex] == ' ')
-			dex++;
-
-		lett = word_len(str + dex);
-
-		strn[x] = malloc(sizeof(char) * (lett + 1));
-
-		if(strn[x] == NULL)
+		if (str[i] == ' ' || str[i] == '\0')
 		{
-			for (; x >= 0; x--)
-				free(strn[x]);
-
-			free(strn);
-			return(NULL);
+			if (x)
+			{
+				z = i;
+				n = (char *) malloc(sizeof(char) * (x + 1));
+				if (n == NULL)
+					return (NULL);
+				while (k < z)
+					*n++ = str[k++];
+				*n = '\0';
+				m[j] = n - x;
+				j++;
+				x = 0;
+			}
 		}
-
-		for (y = 0; y < lett; y++)
-			strn[x][y] = str[dex++];
-
-		strn[x][y] = '\0';
+		else if (x++ == 0)
+			k = i;
 	}
-	strn[x] = NULL;
-
-	return (strn);
+	m[j] = NULL;
+	return (m);
 }
