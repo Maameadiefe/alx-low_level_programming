@@ -3,7 +3,7 @@
 
 /**
  * count_words - this will count number of words contained in a string
- * @x: string
+ * @s: string
  * Return: number of words
  */
 int count_words(char *s)
