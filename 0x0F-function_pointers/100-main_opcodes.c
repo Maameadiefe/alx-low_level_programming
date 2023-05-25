@@ -4,13 +4,13 @@
 /**
  * main - displays it's opcodes
  * @argc: input arguments
- * @argv: array of input arguments
+ * @argv: array input
  * Return: Nothing
  */
 
 int main(int argc, char *argv[])
 {
-	int size, x;
+	int bytes, x;
 	char *car;
 
 	if (argc != 2)
@@ -18,16 +18,16 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(1);
 	}
-	size = atoi(argv[1]);
-	if (size < 0)
+	bytes = atoi(argv[1]);
+	if (bytes < 0)
 	{
 		printf("Error\n");
 		exit(2);
 	}
 	car = (char *)main;
-	for (x = 0; x < size; x++)
+	for (x = 0; x < bytes; x++)
 	{
-		if (x == size - 1)
+		if (x == bytes - 1)
 		{
 			printf("%02hhx\n", car[x]);
 			break;
