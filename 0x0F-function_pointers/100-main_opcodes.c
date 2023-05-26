@@ -2,16 +2,16 @@
 #include <stdlib.h>
 
 /**
- * main - displays it's opcodes
- * @argc: input arguments
- * @argv: array input
+ * main - this will displays it's opcodes
+ * @argc: arguments input
+ * @argv: array of inputed arguments
  * Return: Nothing
  */
 
 int main(int argc, char *argv[])
 {
-	int bytes, x;
-	char *car;
+	int bytes, a;
+	char *s;
 
 	if (argc != 2)
 	{
@@ -24,15 +24,15 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(2);
 	}
-	car = (char *)main;
-	for (x = 0; x < bytes; x++)
+	s = (char *)main;
+	for (a = 0; a < bytes; a++)
 	{
-		if (x == bytes - 1)
+		if (a == bytes - 1)
 		{
-			printf("%02hhx\n", car[x]);
+			printf("%02hhx\n", s[a]);
 			break;
 		}
-		printf("%02hhx", car[x]);
+		printf("%02hhx", s[a]);
 	}
 	return (0);
 }
