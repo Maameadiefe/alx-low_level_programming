@@ -9,14 +9,13 @@
 
 int sum_them_all(const unsigned int n, ...)
 {
+	va_list adf;
+	unsigned int x, sum = 0;
+
 	if  (n == 0)
 	{
 		return (0);
 	}
-
-	va_list adf;
-	unsigned int x, sum = 0;
-
 	va_start(adf, n);
 	for (x = 0; x < n; x++)
 		sum += va_arg(adf, int);
