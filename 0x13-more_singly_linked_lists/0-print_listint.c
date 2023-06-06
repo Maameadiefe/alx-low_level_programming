@@ -2,9 +2,10 @@
 
 /**
  * print_listint - displays the elements of a listint_t list
- * @h: a pointer to the head of the listint_t list
- * Return: the number of nodes in the listint_t list
+ * @h: a pointer to the head of listint_t
+ * Return: the number of nodes in listint_t
  */
+
 size_t print_listint(const listint_t *h)
 {
 	size_t adf = 0;
@@ -15,7 +16,5 @@ size_t print_listint(const listint_t *h)
 		h = h->next;
 		adf++;
 	}
-
 	return (adf);
 }
-
